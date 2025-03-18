@@ -1,6 +1,6 @@
 import css from "./css/ImageCard.module.css";
 
-export default function ImageCard({ thumb, alt }) {
+export default function ImageCard({ thumb, alt, onClick }) {
   return (
     <img
       className={css.ImageCard}
@@ -9,6 +9,7 @@ export default function ImageCard({ thumb, alt }) {
       height="240"
       loading="lazy"
       alt={alt}
+      onClick={onClick}
     />
   );
 }

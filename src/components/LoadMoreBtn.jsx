@@ -1,6 +1,6 @@
-import css from "./css/LoadMore.module.css";
+import css from "./css/LoadMoreBtn.module.css";
 
-export default function LoadMore({ onLoadMore, children }) {
+export default function LoadMoreBtn({ onLoadMore, children }) {
   return (
     <button type="button" onClick={onLoadMore} className={css.Button}>
       {children}

@@ -8,9 +8,12 @@ export default function ImageGallery({ photos, onImageClick }) {
         <li
           key={photo.id}
           className={css.ImageGalleryItem}
-          onClick={() => onImageClick(photo)}
         >
-          <ImageCard thumb={photo.urls.small} alt={photo.alt_description} />
+          <ImageCard
+            thumb={photo.urls.small}
+            alt={photo.alt_description}
+            onClick={() => onImageClick(photo)}
+          />
         </li>
       ))}
     </ul>

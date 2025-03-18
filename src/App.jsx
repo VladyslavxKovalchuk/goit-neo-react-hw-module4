@@ -3,7 +3,7 @@ import { fetchPhotos } from "./integration/unsplash_api";
 import ErrorMessages from "./components/ErrorMessages";
 import ImageGallery from "./components/ImageGallery";
 import Loader from "./components/Loader";
-import LoadMore from "./components/LoadMore";
+import LoadMoreBtn from "./components/LoadMoreBtn";
 import SearchBar from "./components/SearchBar";
 import ImageModal from "./components/ImageModal";
 import { Toaster, toast } from "react-hot-toast";
@@ -82,9 +82,9 @@ function App() {
         </p>
       )}
       {page < totalPages && (
-        <LoadMore onLoadMore={() => setPage((prevState) => prevState + 1)}>
+        <LoadMoreBtn onLoadMore={() => setPage((prevState) => prevState + 1)}>
           Load {isLoading ? <Loader /> : " more"}
-        </LoadMore>
+        </LoadMoreBtn>
       )}
       {selectedImage && (
         <ImageModal
